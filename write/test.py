@@ -6,12 +6,12 @@ Created on 2016-04-07
 '''
 import commands
 import platform
+import logging
 
 def getInformation():
-    grains={}
     try:
-        grains['resCentOS'] = grains.update(
-            {'resName': _resName()})
+        grains = {}
+        grains['resCentOS'] ={'resName': _resName()}
         return grains['resCentOS']
     except Exception,e:
         logging.debug(e)
